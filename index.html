@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App MVP</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Home Section -->
+        <div id="home" class="section active">
+            <div class="welcome-container">
+                <div class="quiz-icon">🎯</div>
+                <h1 class="welcome-title">Quiz Master</h1>
+                <p class="welcome-subtitle">Test your knowledge across various categories</p>
+                <div class="input-group">
+                    <input type="text" id="userName" placeholder="Enter your name" />
+                </div>
+                <button class="start-btn" onclick="startQuiz()">Start Quiz 🚀</button>
+                <div class="features">
+                    <div class="feature-item">✓ Multiple Categories</div>
+                    <div class="feature-item">✓ Instant Feedback</div>
+                    <div class="feature-item">✓ Track Your Score</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Category Selection -->
+        <div id="category" class="section">
+            <h1>Select a Category</h1>
+            <button class="category-btn" onclick="selectCategory('general')">📚 General Knowledge</button>
+            <button class="category-btn" onclick="selectCategory('sports')">⚽ Sports</button>
+            <button class="category-btn" onclick="selectCategory('tnpolitics')">🏛️ TN Politics</button>
+            <button class="category-btn" onclick="selectCategory('tamilmovies')">🎬 Tamil Movies</button>
+            <button class="category-btn" onclick="selectCategory('aptitude')">🧠 Aptitude</button>
+            <button class="category-btn" onclick="selectCategory('ReactBasics')">⚛️ React Basics</button>
+            <button class="category-btn" onclick="selectCategory('TamilHistory')">📜 Tamil History</button>
+            <button class="category-btn" onclick="selectCategory('iplquiz')">🏏 IPL Quiz</button>
+
+        </div>
+
+        <!-- Quiz Section -->
+        <div id="quiz" class="section">
+            <div class="progress" id="progress"></div>
+            <div class="question-container">
+                <div class="question-text" id="questionText"></div>
+                <div id="optionsContainer"></div>
+            </div>
+        </div>
+
+        <!-- Result Section -->
+        <div id="result" class="section">
+            <h1>Quiz Complete!</h1>
+            <h2 id="resultName"></h2>
+            <div class="score-display" id="scoreDisplay"></div>
+            <div class="center">
+                <button onclick="restartQuiz()">Take Another Quiz</button>
+            </div>
+            <div class="leaderboard">
+                <h3>🏆 Leaderboard</h3>
+                <div id="leaderboardList"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
